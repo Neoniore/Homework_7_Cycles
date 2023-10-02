@@ -2,14 +2,14 @@ import java.sql.Time;
 
 public class Main {
     public static void main(String[] args) {
-        Task1();
+      /*  Task1();
         Task2();
         Task3();
         Task4();
-        Task5();
+        Task5();*/
         Task6();
-        Task7();
-        Task8();
+     /*   Task7();
+        Task8();*/
 
     }
 
@@ -85,8 +85,7 @@ public class Main {
             month++;
         }
 */
-        long startTime = System.currentTimeMillis();
-        double inBank = 15000, interestRatePerMonth = 0.07;
+        /*double inBank = 15000, interestRatePerMonth = 0.07;
         int month = 1;
         boolean nineYearsHavePassed = false;
         while (!nineYearsHavePassed){
@@ -97,7 +96,18 @@ public class Main {
             month++;
             if (month > 12 * 9) {
                 nineYearsHavePassed = true;
+            }*/
+
+        double inBank = 15000, interestRatePerMonth = 0.07;
+        int month = 1;
+        boolean nineYearsHavePassed = false;
+        while (!nineYearsHavePassed){
+            inBank += inBank * interestRatePerMonth;
+            if (month % 6 == 0) {
+                System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей \n", month, inBank);
             }
+            month++;
+            nineYearsHavePassed = month > 9 * 12;
         }
         System.out.println();
     }
